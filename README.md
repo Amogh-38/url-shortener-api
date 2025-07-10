@@ -72,7 +72,7 @@ npm start
 **Description** Redirect to original long URL
 
 **Example:**
-```json
+```
 GET http://localhost:5000/M3xtS8
 ```
 
@@ -88,7 +88,7 @@ GET http://localhost:5000/M3xtS8
 ```
 ## 🧪 Postman Collection
 
-You can test all endpoints using this [Postman collection](./postman/url-shortener.postman_collection.json).
+You can test all endpoints using this [Postman Collection](./PostmanCollection/url-shortener.postman_collection.json).
 
 ## 👨‍💻 Author
 Amogh Tiwari
