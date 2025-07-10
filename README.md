@@ -26,22 +26,6 @@ It is a simple URL shortner based on REST API, built with Node.js, express.js an
 
 ---
 
-## 📁 Project Structure
-url-shortener/
-├── controllers/
-│ └── urlController.js
-├── models/
-│ └── Url.js
-├── routes/
-│ └── urlRoutes.js
-├── utils/
-│ └── generateShortCode.js
-├── .env
-└── README.md
-├── package-lock.json
-├── package.json
-├── server.js
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
@@ -63,3 +47,52 @@ BASE_URL=http://localhost:5000
 ```bash
 npm start
 ```
+## API Endpoints
+
+### ✅ POST `/shorten`
+
+**Description:** Create a short URL
+
+**Request Body (JSON):**
+```json
+{
+  "url": "https://example.com",
+  "expiryDays": 2
+}
+```
+**Response**
+```json
+{
+  "shortUrl": "http://localhost:5000/M3xtS8"
+}
+```
+
+### 🔁 Get `/:code`
+
+**Description** Redirect to original long URL
+
+**Example:**
+```json
+GET http://localhost:5000/M3xtS8
+```
+
+### 📊 Get `/analytics/:code`
+
+**Description** Returns the number of times a short URL was clicked
+**Response**
+```json
+{
+    "originalUrl": "https://example.com/some/very/long/link",
+    "clicks": 4
+}
+```
+## 🧪 Postman Collection
+
+You can test all endpoints using this [Postman collection](./postman/url-shortener.postman_collection.json).
+
+## 👨‍💻 Author
+Amogh Tiwari
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
