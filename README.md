@@ -86,6 +86,16 @@ GET http://localhost:5000/M3xtS8
     "clicks": 4
 }
 ```
+
+## 🐳 Docker Instructions
+
+To run the app with Docker:
+
+```bash
+docker-compose up --build
+```
+
+
 ## 🧪 Postman Collection
 
 You can test all endpoints using this [Postman Collection](./PostmanCollection/url-shortener.postman_collection.json).
